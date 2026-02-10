@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakEstate | Premium Real Estate Solutions in Pakistan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp" id="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Property Modal -->
+    <div class="modal-overlay" id="property-modal">
+        <div class="property-modal">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image" id="modal-image"></div>
+                <div class="modal-details">
+                    <div class="modal-tag" id="modal-tag">Hot Deal</div>
+                    <div class="modal-price" id="modal-price">PKR 45 Lakh</div>
+                    <h2 class="modal-title" id="modal-title">Modern 5 Marla House in DHA Phase 6</h2>
+                    <p class="modal-description" id="modal-description">This beautifully designed 5 Marla house offers modern living with spacious rooms, high-quality finishes, and a prime location in DHA Phase 6, Lahore. The property features 3 bedrooms, 3 bathrooms, a large living area, modern kitchen, and a well-maintained garden. Perfect for families looking for a secure and premium lifestyle in one of Lahore's most prestigious neighborhoods.</p>
+                    
+                    <div class="modal-meta" id="modal-meta">
+                        <!-- Meta data will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="modal-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="modal-location">DHA Phase 6, Lahore</span>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button class="modal-button primary" id="modal-call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </button>
+                        <button class="modal-button secondary" id="modal-whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Inquiry
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Super Premium Navbar -->
+    <nav class="new-nav-navbar" id="navbar">
+        <div class="new-nav-logo">
+            <span>PakEstate</span>
+        </div>
+
+        <div class="new-nav-hamburger" id="new-nav-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="new-nav-links">
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Rent</a>
+            <a href="#">Contact</a>
+            <div class="new-nav-dropdown">
+                <a href="#">More <i class="fa fa-caret-down"></i></a>
+                <div class="new-nav-dropdown-content">
+                    <a href="#">Articles</a>
+                    <a href="#">Home Loan Calculator</a>
+                    <a href="#">Market Trends</a>
+                    <a href="#">Legal Services</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="new-nav-right-items">
+            <div class="new-nav-phone"><i class="fa fa-phone"></i> +92 300 1234567</div>
+            <div class="new-nav-account"><i class="fa fa-user-circle"></i></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="new-nav-mobile-menu" id="new-nav-mobile-menu">
+        <a href="#">Buy</a>
+        <a href="#">Sell</a>
+        <a href="#">Rent</a>
+        <a href="#">Contact</a>
+        <div class="new-nav-mobile-dropdown-btn" id="new-nav-mobile-dropdown-btn">
+            More <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="new-nav-mobile-dropdown-content" id="new-nav-mobile-dropdown-content">
+            <a href="#">Articles</a>
+            <a href="#">Home Loan Calculator</a>
+            <a href="#">Market Trends</a>
+            <a href="#">Legal Services</a>
+            <a href="#">Careers</a>
+        </div>
+        <a href="#" class="new-nav-phone"><i class="fa fa-phone"></i> +92 300 1234567</a>
+        <a href="#" class="new-nav-account"><i class="fa fa-user-circle"></i> Account</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Buy, Sell & Invest in Verified Properties Across Pakistan</h1>
+                <p>Trusted real estate solutions for plots, houses, apartments & commercial investments in approved housing societies. Serving local buyers and overseas Pakistanis since 2010.</p>
+                
+                <div class="search-bar">
+                    <form class="search-form" id="search-form">
+                        <select class="search-field" required>
+                            <option value="" disabled selected>Location (City / Area)</option>
+                            <option value="islamabad">Islamabad</option>
+                            <option value="rawalpindi">Rawalpindi</option>
+                            <option value="lahore">Lahore</option>
+                            <option value="karachi">Karachi</option>
+                            <option value="peshawar">Peshawar</option>
+                            <option value="faisalabad">Faisalabad</option>
+                            <option value="multan">Multan</option>
+                        </select>
+                        
+                        <select class="search-field" required>
+                            <option value="" disabled selected>Property Type</option>
+                            <option value="plot">Plot</option>
+                            <option value="house">House</option>
+                            <option value="flat">Flat / Apartment</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="farmhouse">Farmhouse</option>
+                            <option value="penthouse">Penthouse</option>
+                        </select>
+                        
+                        <select class="search-field" required>
+                            <option value="" disabled selected>Budget Range (PKR)</option>
+                            <option value="1-5">1M - 5M</option>
+                            <option value="5-10">5M - 10M</option>
+                            <option value="10-20">10M - 20M</option>
+                            <option value="20-50">20M - 50M</option>
+                            <option value="50+">50M+</option>
+                        </select>
+                        
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i> Search Properties
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span>Verified Listings</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <span>Legal Guidance</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span>Overseas Friendly</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <span>Transparent Dealing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Categories -->
+    <section class="container" id="categories-section">
+        <h2 class="section-title">Find Your Perfect Property</h2>
+        <p class="section-subtitle">Browse through our curated categories to find the property that matches your needs and investment goals</p>
+        
+        <div class="categories">
+            <div class="category-card" data-category="houses">
+                <i class="fas fa-home"></i>
+                <h3>Houses for Sale</h3>
+                <p>Find your perfect home across Pakistan's major cities with verified listings and complete legal documentation.</p>
+            </div>
+            
+            <div class="category-card" data-category="plots">
+                <i class="fas fa-vector-square"></i>
+                <h3>Residential Plots</h3>
+                <p>Plots in approved housing societies with clear titles, legal verification, and development plans.</p>
+            </div>
+            
+            <div class="category-card" data-category="commercial">
+                <i class="fas fa-building"></i>
+                <h3>Commercial Properties</h3>
+                <p>Shops, offices & commercial plots for business and investment with high rental yield potential.</p>
+            </div>
+            
+            <div class="category-card" data-category="apartments">
+                <i class="fas fa-building"></i>
+                <h3>Apartments / Flats</h3>
+                <p>Modern apartments in prime locations with amenities like gym, pool, security, and maintenance.</p>
+            </div>
+            
+            <div class="category-card" data-category="investment">
+                <i class="fas fa-chart-line"></i>
+                <h3>Investment Opportunities</h3>
+                <p>High-return property investments with expert guidance and market trend analysis.</p>
+            </div>
+            
+            <div class="category-card" data-category="rentals">
+                <i class="fas fa-key"></i>
+                <h3>Rental Properties</h3>
+                <p>Find your next rental home or commercial space with flexible terms and verified landlords.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra Premium Featured Properties -->
+    <section class="container" id="properties-section">
+        <h2 class="section-title">Premium Featured Properties</h2>
+        <p class="section-subtitle">Explore our handpicked selection of premium properties with verified documentation and clear titles</p>
+        
+        <div class="properties-grid" id="properties-grid">
+            <!-- Property cards will be populated by JavaScript -->
+        </div>
+        
+        <div class="view-all-button">
+            <button id="view-all-properties">
+                <i class="fas fa-eye"></i> View All Properties
+            </button>
+        </div>
+    </section>
+
+    <!-- Ultra Premium Features Section -->
+    <section class="features-section" id="features-section">
+    <div class="container">
+        <h2 class="section-title">Why Choose PakEstate</h2>
+        <p class="section-subtitle">We provide premium real estate services with a focus on transparency, security, and customer satisfaction</p>
+
+        <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>100% Verified Properties</h3>
+                <p>Every property undergoes thorough legal and physical verification before listing, ensuring complete transparency and security for your investment.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Legal Expertise</h3>
+                <p>Our in-house legal team provides comprehensive support including title verification, documentation, and registration assistance throughout the process.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Overseas Pakistanis</h3>
+                <p>Dedicated services for overseas clients with remote property management, video tours, and secure international transaction processing.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Market Intelligence</h3>
+                <p>Access to detailed market analysis, trends, and investment insights to make informed decisions for maximum returns on your property investments.</p>
+            </div>
+
+            <!-- Card 5 (new) -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Trusted Partners</h3>
+                <p>We collaborate with trusted developers, banks, and legal advisors to ensure seamless transactions and peace of mind for our clients.</p>
+            </div>
+
+            <!-- Card 6 (new) -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Customer Support</h3>
+                <p>Our dedicated support team is available round-the-clock to answer queries, guide property searches, and assist in every step of your investment journey.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Ultra Premium Housing Societies Section -->
+    <section class="societies" id="societies-section">
+        <div class="container">
+            <h2 class="societies-title">Approved Housing Societies</h2>
+            <p class="societies-subtitle">We partner exclusively with legally approved and verified housing projects to ensure secure investments for our clients</p>
+            
+            <div class="societies-grid">
+                <div class="society-card">
+                    <div class="society-logo-container">
+                        <div class="society-logo">DHA</div>
+                        <div class="society-logo-badge">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <h3>Defence Housing Authority</h3>
+                    <div class="society-type">Premium Residential</div>
+                    <p>Pakistan's most prestigious and secure housing society with top-notch infrastructure, security, and amenities for premium living.</p>
+                    <div class="society-features">
+                        <span class="society-feature">24/7 Security</span>
+                        <span class="society-feature">Modern Infrastructure</span>
+                        <span class="society-feature">Prime Location</span>
+                    </div>
+                </div>
+                
+                <div class="society-card">
+                    <div class="society-logo-container">
+                        <div class="society-logo">Bahria</div>
+                        <div class="society-logo-badge">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <h3>Bahria Town</h3>
+                    <div class="society-type">Integrated Township</div>
+                    <p>A self-contained modern township with world-class amenities, town planning, and comprehensive facilities for residents.</p>
+                    <div class="society-features">
+                        <span class="society-feature">Modern Amenities</span>
+                        <span class="society-feature">Town Planning</span>
+                        <span class="society-feature">Community Living</span>
+                    </div>
+                </div>
+                
+                <div class="society-card">
+                    <div class="society-logo-container">
+                        <div class="society-logo">CSC</div>
+                        <div class="society-logo-badge">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <h3>Capital Smart City</h3>
+                    <div class="society-type">Smart City</div>
+                    <p>Pakistan's first smart city featuring modern technology, sustainable design, and intelligent infrastructure solutions.</p>
+                    <div class="society-features">
+                        <span class="society-feature">Smart Technology</span>
+                        <span class="society-feature">Sustainable Design</span>
+                        <span class="society-feature">Future Ready</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="society-note">
+                <i class="fas fa-shield-alt"></i>
+                We deal only in legally approved and verified housing projects to ensure secure investments for our clients. All societies are vetted for legal compliance and development status.
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra Premium Investment Guidance -->
+    <section class="investment" id="investment-section">
+        <div class="container">
+            <div class="investment-content">
+                <h2>Smart Property Investment Guidance</h2>
+                <p>Our team of real estate experts provides personalized investment consultation to help you make informed decisions. Whether you're a first-time buyer, seasoned investor, or overseas Pakistani, we offer comprehensive insights on market trends, legal requirements, and high-return opportunities tailored to your financial goals.</p>
+                <button class="consultation-button" id="consultation-button">
+                    <i class="fas fa-calendar-check"></i> Get Free Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra Premium Call to Action -->
+    <section class="cta" id="cta-section">
+        <div class="container">
+            <h2>Ready to Make Your Real Estate Move?</h2>
+            <p>Whether you're looking to buy, sell, rent, or invest in property, our experienced team is ready to provide personalized solutions and guidance for all your real estate needs.</p>
+            
+            <div class="cta-buttons">
+                <button class="cta-button cta-call" onclick="window.location.href='tel:+923001234567'">
+                    <i class="fas fa-phone"></i> Call Now +92 300 1234567
+                </button>
+                <button class="cta-button cta-whatsapp" onclick="window.open('https://wa.me/923001234567', '_blank')">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Now
+                </button>
+                <button class="cta-button" style="background-color: var(--accent); color: var(--primary);" id="schedule-call">
+                    <i class="fas fa-video"></i> Schedule Video Call
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra Premium FAQ -->
+    <section class="faq" id="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find answers to common questions about our services and the property buying process</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are all properties verified before listing?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we have a rigorous verification process. Every property listed on PakEstate undergoes thorough legal clearance checks, ownership document verification, and physical inspection by our team before being listed. We ensure all properties have clear titles and are free from any legal disputes.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you deal only in approved housing societies?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We primarily focus on legally approved housing societies to ensure our clients' investments are secure and have proper development plans. We verify the approval status of all projects with relevant authorities before listing any property. This protects our clients from investing in unauthorized or illegal housing schemes.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can overseas Pakistanis invest through you?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We specialize in assisting overseas Pakistanis with property investment in Pakistan. Our dedicated overseas desk handles all documentation, legal processes, and property management remotely. We offer video property tours, digital documentation, and secure payment gateways for international transactions. Over 40% of our clients are overseas Pakistanis.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is the initial consultation really free?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, our initial consultation is completely free with no obligations. Our experts will analyze your requirements, budget, and investment goals to provide personalized recommendations. We'll help you understand the market, legal requirements, financing options, and potential returns without any charges.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer properties on installment plans?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we have partnerships with several approved developers and housing societies that offer flexible installment plans. We can help you find properties with payment plans ranging from 6 months to 5 years, with down payments as low as 10-20%. We also assist with home financing through our banking partners.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What legal support do you provide?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We provide comprehensive legal support including title verification, document preparation, registration assistance, and NOC processing. Our in-house legal team works with you throughout the transaction to ensure all legal requirements are met and your investment is fully protected.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra Premium Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>PakEstate</h3>
+                    <p>Your trusted partner for buying, selling, renting and investing in verified properties across Pakistan. Serving local and overseas Pakistanis with premium real estate solutions since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Office #10, Blue Area, Islamabad</a></li>
+                        <li><a href="tel:+923001234567"><i class="fas fa-phone"></i> +92 300 1234567</a></li>
+                        <li><a href="mailto:info@pakestate.com"><i class="fas fa-envelope"></i> info@pakestate.com</a></li>
+                        <li><a href="https://wa.me/923001234567" target="_blank"><i class="fab fa-whatsapp"></i> +92 300 1234567 (WhatsApp)</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Mon-Sat: 9AM - 7PM</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i> Buy Property</a></li>
+                        <li><a href="#"><i class="fas fa-tag"></i> Sell Property</a></li>
+                        <li><a href="#"><i class="fas fa-key"></i> Rent Property</a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-newspaper"></i> Articles & Guides</a></li>
+                        <li><a href="#"><i class="fas fa-calculator"></i> Loan Calculator</a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Market Trends</a></li>
+                        <li><a href="#"><i class="fas fa-gavel"></i> Legal Services</a></li>
+                        <li><a href="#"><i class="fas fa-briefcase"></i> Careers</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>Prices and availability are subject to change. We are authorized property consultants and dealers, not developers. All property listings are verified but buyers are encouraged to conduct their own due diligence.</p>
+                <p>© 2023 PakEstate Premium Real Estate. All rights reserved. | Reg. No. REA-2023-456</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Property data for dynamic rendering
+        const properties = [
+            {
+                id: 1,
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80',
+                tag: 'Hot Deal',
+                tagColor: 'accent',
+                price: 'PKR 45 Lakh',
+                title: 'Modern 5 Marla House in DHA',
+                size: '5 Marla',
+                beds: '3',
+                baths: '3',
+                type: 'House',
+                location: 'DHA Phase 6, Lahore',
+                description: 'This beautifully designed 5 Marla house offers modern living with spacious rooms, high-quality finishes, and a prime location in DHA Phase 6, Lahore. The property features 3 bedrooms, 3 bathrooms, a large living area, modern kitchen, and a well-maintained garden. Perfect for families looking for a secure and premium lifestyle in one of Lahore\'s most prestigious neighborhoods.'
+            },
+            {
+                id: 2,
+                image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80',
+                tag: 'Ready for Possession',
+                tagColor: 'primary',
+                price: 'PKR 1.2 Crore',
+                title: 'Luxury 10 Marla Villa',
+                size: '10 Marla',
+                beds: '4',
+                baths: '4',
+                type: 'House',
+                location: 'Bahria Town, Rawalpindi',
+                description: 'Spacious 10 Marla luxury villa ready for immediate possession. Features include 4 bedrooms with attached baths, modern kitchen, drawing room, dining area, lawn, and servant quarters. Located in a premium sector of Bahria Town with 24/7 security and all modern amenities.'
+            },
+            {
+                id: 3,
+                image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80',
+                tag: 'Premium Plot',
+                tagColor: 'accent',
+                price: 'PKR 75 Lakh',
+                title: '1 Kanal Corner Plot',
+                size: '1 Kanal',
+                beds: '0',
+                baths: '0',
+                type: 'Plot',
+                location: 'Capital Smart City, Islamabad',
+                description: 'Premium 1 Kanal corner plot in the most sought-after block of Capital Smart City. The plot faces a park and is located on a wide boulevard. All development charges paid, ready for construction with approved building plans available.'
+            },
+            {
+                id: 4,
+                image: 'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80',
+                tag: 'Investment Opportunity',
+                tagColor: 'accent',
+                price: 'PKR 2.5 Crore',
+                title: 'Commercial Plaza',
+                size: '2 Kanal',
+                beds: '0',
+                baths: '0',
+                type: 'Commercial',
+                location: 'Blue Area, Islamabad',
+                description: 'Prime commercial property in Blue Area, Islamabad. The 2 Kanal plot has approval for 8-story commercial plaza construction. Ideal for corporate offices, banks, or retail space. High rental yield potential with excellent location value.'
+            },
+            {
+                id: 5,
+                image: 'https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80',
+                tag: 'Luxury Apartment',
+                tagColor: 'accent',
+                price: 'PKR 90 Lakh',
+                title: '3 Bed Luxury Apartment',
+                size: '2,200 sq.ft.',
+                beds: '3',
+                baths: '3',
+                type: 'Apartment',
+                location: 'Clifton, Karachi',
+                description: 'Brand new luxury apartment in a high-rise tower in Clifton, Karachi. Features include 3 bedrooms with ensuite bathrooms, modern kitchen, spacious living area, balcony with sea view, and access to premium amenities including gym, pool, and security.'
+            },
+            {
+                id: 6,
+                image: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80',
+                tag: 'Installment Available',
+                tagColor: 'primary',
+                price: 'PKR 35 Lakh',
+                title: '5 Marla Residential Plot',
+                size: '5 Marla',
+                beds: '0',
+                baths: '0',
+                type: 'Plot',
+                location: 'DHA Phase 9, Lahore',
+                description: '5 Marla residential plot in the newly developed sector of DHA Phase 9. Available on easy installment plan (20% down payment, balance in 3 years). Plot is on a 40ft wide road with all utilities available including electricity, gas, water, and sewerage.'
+            }
+        ];
+
+        // DOM Elements
+        const navbar = document.getElementById('navbar');
+        const hamburger = document.getElementById('new-nav-hamburger');
+        const mobileMenu = document.getElementById('new-nav-mobile-menu');
+        const mobileDropdownBtn = document.getElementById('new-nav-mobile-dropdown-btn');
+        const mobileDropdownContent = document.getElementById('new-nav-mobile-dropdown-content');
+        const floatingWhatsApp = document.getElementById('floating-whatsapp');
+        const propertyModal = document.getElementById('property-modal');
+        const modalClose = document.getElementById('modal-close');
+        const propertiesGrid = document.getElementById('properties-grid');
+        const searchForm = document.getElementById('search-form');
+        const consultationButton = document.getElementById('consultation-button');
+        const scheduleCallButton = document.getElementById('schedule-call');
+        const viewAllPropertiesButton = document.getElementById('view-all-properties');
+        const categoryCards = document.querySelectorAll('.category-card');
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        mobileDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileDropdownContent.style.display = mobileDropdownContent.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const isClickInsideMenu = mobileMenu.contains(e.target) || hamburger.contains(e.target);
+            if (!isClickInsideMenu) {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                mobileDropdownContent.style.display = 'none';
+            }
+        });
+
+        // Category cards click
+        categoryCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const category = card.dataset.category;
+                alert(`Showing properties for ${category} category. In a real application, this would filter properties.`);
+                
+                // Add visual feedback
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 200);
+            });
+        });
+
+        // View all properties button
+        viewAllPropertiesButton.addEventListener('click', () => {
+            alert('This would navigate to a full properties listing page with advanced filters and search options.');
+        });
+
+        // Floating WhatsApp button
+        floatingWhatsApp.addEventListener('click', () => {
+            window.open('https://wa.me/923001234567', '_blank');
+        });
+
+        // Modal close function
+        function closeModal() {
+            propertyModal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+
+        // Modal close button
+        modalClose.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside
+        propertyModal.addEventListener('click', (e) => {
+            if (e.target === propertyModal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && propertyModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Search form submission
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const location = searchForm.querySelector('select:nth-child(1)').value;
+            const type = searchForm.querySelector('select:nth-child(2)').value;
+            const budget = searchForm.querySelector('select:nth-child(3)').value;
+            
+            if (location && type && budget) {
+                alert(`Searching for ${type} properties in ${location} with budget ${budget}. In a real application, this would show filtered results.`);
+            } else {
+                alert('Please fill all search fields to find properties.');
+            }
+        });
+
+        // Consultation button
+        consultationButton.addEventListener('click', () => {
+            alert('Thank you for your interest! Our consultant will contact you within 24 hours to schedule your free consultation.');
+        });
+
+        // Schedule call button
+        scheduleCallButton.addEventListener('click', () => {
+            alert('Video call scheduling feature would open a calendar for selecting available time slots with our property experts.');
+        });
+
+        // FAQ accordion
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current FAQ item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Render property cards
+        function renderProperties() {
+            propertiesGrid.innerHTML = '';
+            
+            properties.forEach(property => {
+                const card = document.createElement('div');
+                card.className = 'property-card';
+                card.dataset.id = property.id;
+                
+                const tagColor = property.tagColor === 'primary' ? 'style="background-color: var(--primary); color: var(--accent);"' : '';
+                
+                card.innerHTML = `
+                    <div class="property-image" style="background-image: url('${property.image}')">
+                        <div class="property-tag" ${tagColor}>${property.tag}</div>
+                        <div class="property-price-badge">${property.price}</div>
+                    </div>
+                    <div class="property-details">
+                        <h3 class="property-title">${property.title}</h3>
+                        <div class="property-meta">
+                            <span><i class="fas fa-vector-square"></i> ${property.size}</span>
+                            <span><i class="fas fa-bed"></i> ${property.beds} Bed</span>
+                            <span><i class="fas fa-bath"></i> ${property.baths} Bath</span>
+                            <span><i class="fas fa-home"></i> ${property.type}</span>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> ${property.location}
+                        </div>
+                        <div class="property-actions">
+                            <button class="details-button view-details" data-id="${property.id}">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button class="whatsapp-button-small whatsapp-inquiry" data-id="${property.id}">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                propertiesGrid.appendChild(card);
+            });
+            
+            // Add event listeners to "View Details" buttons
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const propertyId = parseInt(e.target.closest('.view-details').dataset.id);
+                    openPropertyModal(propertyId);
+                });
+            });
+            
+            // Add event listeners to "WhatsApp Inquiry" buttons
+            document.querySelectorAll('.whatsapp-inquiry').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const propertyId = parseInt(e.target.closest('.whatsapp-inquiry').dataset.id);
+                    const property = properties.find(p => p.id === propertyId);
+                    const message = `Hi, I'm interested in this property: ${property.title} - ${property.price} in ${property.location}. Please share more details.`;
+                    const encodedMessage = encodeURIComponent(message);
+                    window.open(`https://wa.me/923001234567?text=${encodedMessage}`, '_blank');
+                });
+            });
+        }
+
+        // Open property modal with details
+        function openPropertyModal(propertyId) {
+            const property = properties.find(p => p.id === propertyId);
+            
+            if (!property) return;
+            
+            // Set modal content
+            document.getElementById('modal-image').style.backgroundImage = `url('${property.image}')`;
+            document.getElementById('modal-tag').textContent = property.tag;
+            document.getElementById('modal-price').textContent = property.price;
+            document.getElementById('modal-title').textContent = property.title;
+            document.getElementById('modal-description').textContent = property.description;
+            document.getElementById('modal-location').textContent = property.location;
+            
+            // Set meta data
+            const modalMeta = document.getElementById('modal-meta');
+            modalMeta.innerHTML = `
+                <div class="modal-meta-item">
+                    <i class="fas fa-vector-square"></i>
+                    <div>
+                        <div class="meta-label">Size</div>
+                        <div class="meta-value">${property.size}</div>
+                    </div>
+                </div>
+                <div class="modal-meta-item">
+                    <i class="fas fa-bed"></i>
+                    <div>
+                        <div class="meta-label">Bedrooms</div>
+                        <div class="meta-value">${property.beds}</div>
+                    </div>
+                </div>
+                <div class="modal-meta-item">
+                    <i class="fas fa-bath"></i>
+                    <div>
+                        <div class="meta-label">Bathrooms</div>
+                        <div class="meta-value">${property.baths}</div>
+                    </div>
+                </div>
+                <div class="modal-meta-item">
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <div class="meta-label">Property Type</div>
+                        <div class="meta-value">${property.type}</div>
+                    </div>
+                </div>
+            `;
+            
+            // Set modal button actions
+            document.getElementById('modal-call').onclick = () => {
+                window.location.href = 'tel:+923001234567';
+            };
+            
+            document.getElementById('modal-whatsapp').onclick = () => {
+                const message = `Hi, I'm interested in this property: ${property.title} - ${property.price} in ${property.location}. Please share more details.`;
+                const encodedMessage = encodeURIComponent(message);
+                window.open(`https://wa.me/923001234567?text=${encodedMessage}`, '_blank');
+            };
+            
+            // Open modal
+            propertyModal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+
+        // Initialize properties on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProperties();
+        });
+    </script>
+</body>
+</html>
