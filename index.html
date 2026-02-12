@@ -55,7 +55,7 @@
     <!-- Super Premium Navbar -->
     <nav class="new-nav-navbar" id="navbar">
         <div class="new-nav-logo">
-            <span>PakEstate</span>
+            <img src="images/logo.webp" alt="">
         </div>
 
         <div class="new-nav-hamburger" id="new-nav-hamburger">
@@ -69,15 +69,14 @@
             <a href="buy.html">Buy</a>
             <a href="sell.html">Sell</a>
             <a href="about-us.html">About</a>
-            <a href="#">Contact</a>
+            <a href="contact-us.html">Contact</a>
             <div class="new-nav-dropdown">
                 <a href="#">More <i class="fa fa-caret-down"></i></a>
                 <div class="new-nav-dropdown-content">
                     <a href="articles.html">Articles</a>
-                    <a href="#">Home Loan Calculator</a>
-                    <a href="#">Market Trends</a>
-                    <a href="#">Legal Services</a>
-                    <a href="#">Careers</a>
+                    <a href="loan-calculator.html">Home Loan Calculator</a>
+                    <a href="market-trend.html">Market Trends</a>
+                    <a href="legal-services.html">Legal Services</a>
                 </div>
             </div>
         </div>
@@ -94,20 +93,20 @@
         <a href="buy.html">Buy</a>
         <a href="sell.html">Sell</a>
         <a href="about-us.html">About</a>
-        <a href="#">Contact</a>
+        <a href="contact-us.html">Contact</a>
         <div class="new-nav-mobile-dropdown-btn" id="new-nav-mobile-dropdown-btn">
             More <i class="fa fa-caret-down"></i>
         </div>
         <div class="new-nav-mobile-dropdown-content" id="new-nav-mobile-dropdown-content">
             <a href="articles.html">Articles</a>
-            <a href="#">Home Loan Calculator</a>
-            <a href="#">Market Trends</a>
-            <a href="#">Legal Services</a>
-            <a href="#">Careers</a>
+            <a href="loan-calculator.html">Home Loan Calculator</a>
+            <a href="market-trend.html">Market Trends</a>
+            <a href="legal-services.html">Legal Services</a>
         </div>
         <a href="#" class="new-nav-phone"><i class="fa fa-phone"></i> +92 300 1234567</a>
         <a href="#" class="new-nav-account"><i class="fa fa-user-circle"></i> Account</a>
     </div>
+
 
     <!-- Hero Section -->
     <section class="hero" id="home-section">
@@ -576,7 +575,7 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-column">
-                    <h3>PakEstate</h3>
+                    <img src="images/logo.webp" alt="" id="footer-logo">
                     <p>Your trusted partner for buying, selling, renting and investing in verified properties across Pakistan. Serving local and overseas Pakistanis with premium real estate solutions since 2010.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -596,7 +595,7 @@
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -604,19 +603,18 @@
     <li><a href="buy.html"><i class="fas fa-shopping-cart"></i> Buy </a></li>
     <li><a href="sell.html"><i class="fas fa-tag"></i> Sell </a></li>
     <li><a href="articles.html"><i class="fas fa-newspaper"></i> Articles</a></li>
-    <li><a href="#"><i class="fas fa-phone-alt"></i> Contact</a></li>
+    <li><a href="contact-us.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
 </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-newspaper"></i> Articles & Guides</a></li>
-                        <li><a href="#"><i class="fas fa-calculator"></i> Loan Calculator</a></li>
-                        <li><a href="#"><i class="fas fa-chart-line"></i> Market Trends</a></li>
-                        <li><a href="#"><i class="fas fa-gavel"></i> Legal Services</a></li>
-                        <li><a href="#"><i class="fas fa-briefcase"></i> Careers</a></li>
-                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="articles.html"><i class="fas fa-newspaper"></i> Articles & Guides</a></li>
+                        <li><a href="loan-calculator.html"><i class="fas fa-calculator"></i> Loan Calculator</a></li>
+                        <li><a href="market-trend.html"><i class="fas fa-chart-line"></i> Market Trends</a></li>
+                        <li><a href="legal-services.html"><i class="fas fa-gavel"></i> Legal Services</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -982,5 +980,74 @@
             renderProperties();
         });
     </script>
+
+    <!-- Popup Form -->
+ <!-- Account Popup -->
+<div class="account-popup-overlay" id="accountPopup">
+  <div class="account-popup">
+
+    <span class="account-close">&times;</span>
+
+    <!-- Tabs -->
+    <div class="account-tabs">
+      <button class="account-tab active" data-tab="login">Login</button>
+      <button class="account-tab" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- Login -->
+    <form class="account-form active" id="login">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Signup -->
+    <form class="account-form" id="signup">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Create Account</button>
+    </form>
+
+  </div>
+</div>
+
+<script>
+const accountBtn = document.querySelector(".new-nav-account");
+const popup = document.getElementById("accountPopup");
+const closeBtn = document.querySelector(".account-close");
+const tabs = document.querySelectorAll(".account-tab");
+const forms = document.querySelectorAll(".account-form");
+
+// Open popup
+accountBtn.addEventListener("click", () => {
+  popup.classList.add("active");
+});
+
+// Close popup
+closeBtn.addEventListener("click", () => {
+  popup.classList.remove("active");
+});
+
+// Close on overlay click
+popup.addEventListener("click", e => {
+  if(e.target === popup) popup.classList.remove("active");
+});
+
+// Tabs switch
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    forms.forEach(f => f.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  });
+});
+</script>
+
+<!-- Market Trend -->
+ 
+
 </body>
 </html>
